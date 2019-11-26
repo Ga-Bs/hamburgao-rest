@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <h1>Login</h1>
+
+    <?
+    if (isset($sucesso)) {
+        if ($sucesso == 'fail') {
+            echo "Login falhou";
+        }
+    }
+    ?>
+
+    <form action="/login/" method="post">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>
